@@ -1,10 +1,11 @@
 <?php
 $servername="localhost";
 $username="root";
-$password="usbw";
+$password=" ";
 $dbname="Cinema";
+$port = 3306;
 //Create connection
-$con = mysqli_connect($servername, $username, $dbname);
+$con = mysqli_connect($servername, $username, $dbname, $port);
 //Check connection
 if (!$con) {
 	die("Connection failed: " . mysqli_connect_error());
