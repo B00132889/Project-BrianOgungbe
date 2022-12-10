@@ -8,8 +8,8 @@ $sql = "select * from customers";
 
 $result = mysqli_query($con,$sql);
 while(mysqli_fetch_assoc($result)) {
-	
-	
+	$fn = $row['firstname'];
+
 }
 
 
