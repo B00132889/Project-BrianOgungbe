@@ -10,9 +10,10 @@ include("dbcon.php");
 $sql = "insert into customers(firstname,surname,email,phone,dateofbirth)
 values ('$fname','$sname','$email','$ph','$dob')";
    
+
 mysqli_query($con,$sql);
 mysqli_close($con);
-
+echo "Customer Inserted Into Data";
 
 
 ?>
