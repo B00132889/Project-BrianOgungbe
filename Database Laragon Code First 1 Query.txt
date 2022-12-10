@@ -1,0 +1,16 @@
+drop database if exists cinema;
+create database cinema;
+use cinema;
+
+create table customers (
+id int auto_increment, 
+firstname varchar(30),
+surname varchar(30),
+email varchar(50),
+phone varchar(15),
+dateofbirth date,
+primary key (id)
+);
+
+insert into customers(firstname,surname,email,phone,dateofbirth)
+values ('john','doe','JohnDoe@btcmod.com','0852128854','1989-06-09')
