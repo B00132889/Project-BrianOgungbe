@@ -12,6 +12,8 @@ while(mysqli_fetch_assoc($result)) {
 	$sn = $row['surname'];
 	$email = $row['email'];
 	$ph = $row['phone'];
+	$dob = $row['dateofbirth'];
+	
 }
 
 
