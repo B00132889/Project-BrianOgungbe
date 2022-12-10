@@ -13,7 +13,7 @@ values ('$fname','$sname','$email','$ph','$dob')";
 
 mysqli_query($con,$sql);
 mysqli_close($con);
-echo "Customer Inserted Into Data";
+echo "Customer Inserted Into Database";
 
 
 ?>
