@@ -15,7 +15,7 @@ while($row=mysqli_fetch_assoc($result)) {
 	$ph = $row['phone'];
 	$dob = $row['dateofbirth'];
 	
-	echo "$fn, $sn, $email, $ph, $dob<br>";
+	echo "<TR><TD>$fn</TD><TD>$sn</TD><TD>$email</TD><TD>$ph</TD><TD>$dob</TD></TR>";
 }
 echo "</TABLE>";
 
