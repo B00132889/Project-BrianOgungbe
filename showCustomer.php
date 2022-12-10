@@ -7,6 +7,7 @@ $sql = "select * from customers";
    
 
 $result = mysqli_query($con,$sql);
+echo "<TABLE border='1'>";
 while($row=mysqli_fetch_assoc($result)) {
 	$fn = $row['firstname'];
 	$sn = $row['surname'];
@@ -16,7 +17,7 @@ while($row=mysqli_fetch_assoc($result)) {
 	
 	echo "$fn, $sn, $email, $ph, $dob<br>";
 }
-
+echo "</TABLE>";
 
 
 
