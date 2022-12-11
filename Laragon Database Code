@@ -1,6 +1,17 @@
+//Query1:
 drop database if exists cinema;
 create database cinema;
 use cinema;
+
+CREATE TABLE staff  (
+id INT AUTO_INCREMENT,
+firstname VARCHAR(30),
+surname VARCHAR(30),
+email VARCHAR(30),
+dateofbirth VARCHAR(30),
+salary DECIMAL(10,2),
+PRIMARY KEY(id)
+);
 
 create table customers (
 id int auto_increment, 
@@ -8,9 +19,23 @@ firstname varchar(30),
 surname varchar(30),
 email varchar(50),
 phone varchar(15),
-dateofbirth date,
+dateofbirth DATE,
+staffid INT,
+FOREIGN KEY(staffid) REFERENCES staff(id),
 primary key (id)
 );
 
-insert into customers(firstname,surname,email,phone,dateofbirth)
-values ('john','doe','JohnDoe@btcmod.com','0852128854','1989-06-09')
+INSERT INTO staff(firstname,surname,email,dateofbirth,salary) VALUES ("Isaac", "Clark", "ClarkI72@ceoshub.com", "1985-05-11", "37000.00");
+INSERT INTO staff(firstname,surname,email,dateofbirth,salary) VALUES ("James", "Newton", "NewtJames101@jourrapide.com", "1982-09-28", "36500.00");
+INSERT INTO staff(firstname,surname,email,dateofbirth,salary) VALUES ("Brady", "Smith", "BradyS1984@dayrep.com", "1984-11-21", "35000.00");
+
+insert into customers(firstname,surname,email,phone,dateofbirth,staffid) values ('John','Doe','JohnDoe@btcmod.com','0852128854','1989-06-09',1);
+insert into customers(firstname,surname,email,phone,dateofbirth,staffid) values ('Jane','Doe','DoeJane1992@superrito.com','0867738294','1992-03-17',1);
+insert into customers(firstname,surname,email,phone,dateofbirth,staffid) values ('Zack','Cross','Zcross5689@ceoshub.com','0871012263','1986-10-12',2);
+insert into customers(firstname,surname,email,phone,dateofbirth,staffid) values ('Emma','Flannery','FlanE@fleckens.hu','085334192','1983-08-15',2);
+insert into customers(firstname,surname,email,phone,dateofbirth,staffid) values ('Perlix','Soco','NicoSoco24@armyspy.com','0834443675','1998-11-15',3);
+insert into customers(firstname,surname,email,phone,dateofbirth,staffid) values ('Rebecca','Foster','92RFoster@teleworm.us','0872359981','2001-07-23',3);
+
+//Query2:
+USE cinema;
+SELECT * FROM customers
