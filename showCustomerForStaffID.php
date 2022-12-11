@@ -2,7 +2,7 @@
 
 
 include("dbcon.php");
-
+$sid = $_GET['staffid'];
 $sql = "select * from customers";
    
 
