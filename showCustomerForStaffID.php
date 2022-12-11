@@ -3,9 +3,8 @@
 
 include("dbcon.php");
 $sid = $_GET['staffid'];
-$sql = "select * from customers";
+$sql = "select * from customers where staffid=$sid";
    
-
 $result = mysqli_query($con,$sql);
 echo "<TABLE border='1'>";
 while($row=mysqli_fetch_assoc($result)) {
